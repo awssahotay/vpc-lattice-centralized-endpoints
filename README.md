@@ -38,23 +38,6 @@ Workload Dev VPC (10.0.0.0/16)     Workload Test VPC (10.0.0.0/16)
          AWS Services (via AWS PrivateLink)
 ```
 
-## Key Finding: VPC Association is Sufficient!
-
-**CRITICAL DISCOVERY:** For EC2 instances inside a VPC, you only need:
-1. VPC Association to the Service Network
-2. PHZ associations for DNS override
-
-You do NOT need:
-- Service Network Endpoints
-- Manual routes to Lattice prefix list
-- Complex security group configurations
-
-**When Service Network Endpoints ARE needed:**
-- Traffic from Transit Gateway
-- Traffic from VPN connections
-- Traffic from Direct Connect
-- Traffic from peered VPCs
-
 ## Quick Start
 
 ```bash
